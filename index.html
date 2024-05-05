@@ -1,80 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            color: #007bff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        footer {
-            text-align: center;
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Background</title>
+<style>
+
+@font-face {
+    font-family: 'LEMONMILK';
+    src: url('./fonts/LEMONMILK/LEMONMILK-Regular.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, black, rgb(50, 50, 55), black);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: center; /* Align content to the center */
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Align content to the center */
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+}
+
+.center-container {
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px;
+}
+
+.blue-rectangle {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: blue;
+    transition: all 0.3s ease;
+}
+
+.blue-rectangle:hover {
+    width: 120%;
+    height: 400px;
+    margin-bottom: 20px;
+    background-color: blue;
+}
+
+.image-in{
+    width: auto;
+    height: 100%;
+}
+
+.hyperlink-image{
+    width: auto;
+    height: auto;
+}
+
+.title-box {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.name {
+    color: white;
+    font-family: 'LEMONMILK';
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.references {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center buttons */
+}
+
+.reference img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
+
+.reference img:hover {
+    box-shadow: inset 0 0 100px 5px white, 0 0 100px 5px white; /* Add inset shadow behind the image */
+}
+
+.title-heading {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-bottom: 4px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 850px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to the center of the container */
+    }
+    .title-heading {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 8px;;
+    }
+}
+
+</style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Computer Scientist | Developer | Innovator</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Add your introduction here.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Add your projects here.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Add your contact information here.</p>
-        </section>
+    <div class="container center-container">
+        <div class="name"><i>Marcus Scese</i></div>
+        <div class="title-heading">Software Engineer</div>
+        <div class="references">
+            <div class="reference">
+                <a href="https://www.example.com">
+                    <img src="./images/GitHub_icon.png" alt="Website 1">
+                </a>
+            </div>
+            <div class="reference">
+                <a href="https://www.example.com">
+                    <img src="./images/Gmail_icon.png" alt="Website 2">
+                </a>
+            </div>
+            <div class="reference">
+                <a href="https://www.example.com">
+                    <img src="./images/LinkedIn_icon.png" alt="Website 3">
+                </a>
+            </div>
+        </div>
     </div>
-    <footer>
-        &copy; 2024 Your Name. All rights reserved.
-    </footer>
+
+    <div class="container2 center-container">
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+    </div>
+    <!-- <div class="flex-column">
+        <div class="header, title-box">
+            <h1>Your Name</h1>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+                <img src="./images/LinkedIn_icon.png" alt="LinkedIn Icon Hyperlink">
+            </a>
+            <a href="mailto:your@email.com">
+                <img class="hyperlink-image" src="./images/Gmail_icon.png" alt="Gmail Icon Hyperlink">
+            </a>
+            <a href="https://www.github.com">
+                <img class="hyperlink-image" src="./images/GitHub_icon.png" alt="GitHub Icon Hyperlink">
+            </a>
+        </div>
+        <div class="blue-rectangle">
+            <img class="image-in" src="./images/Capture.PNG" alt="Phone Screen">
+        </div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+    </div> -->
 </body>
 </html>
