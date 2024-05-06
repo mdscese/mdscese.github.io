@@ -1,42 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
   const imageContainers = document.querySelectorAll(".image-container");
 
-  imageContainers.forEach(imageContainer => {
-    const folderPath = imageContainer.getAttribute("data-folder");
-    fetchImages(folderPath, imageContainer);
-  });
+      imageContainers.forEach(imageContainer => {
+        const imageUrls = getImageUrlsFromDiv(imageContainer);
+        fetchImages(imageUrls, imageContainer);
+      });
 
-  function fetchImages(folderPath, container) {
-    // Log the folder path
-    console.log("Folder path:", folderPath);
+      function getImageUrlsFromDiv(container) {
+        const folderPath = container.getAttribute("data-folder");
+        return folderPath.split(" ");
+      }
 
-    // Fetch the images from the folder
-    fetch(folderPath)
-      .then(response => response.text())
-      .then(text => {
-        // Parse HTML text to extract image filenames
-        const parser = new DOMParser();
-        const htmlDoc = parser.parseFromString(text, "text/html");
-        const imageFilenames = Array.from(htmlDoc.querySelectorAll("a"))
-          .map(a => a.getAttribute("href"))
-          .filter(href => /\.(jpeg|jpg|gif|png)$/i.test(href));
-
-        // Log the files found at the folder path
-        console.log("Files found:", imageFilenames);
-
-        // Append images to the container
-        imageFilenames.forEach(filename => {
+      function fetchImages(imageUrls, container) {
+        imageUrls.forEach(imageUrl => {
           const img = document.createElement("img");
-          const imagePath = folderPath.endsWith("/") ? folderPath : folderPath + "/";
-          console.log("imagepath", imagePath);
-          console.log("filename", filename);
-          img.src = filename;
-          img.alt = filename;
+          img.src = imageUrl;
+          img.alt = imageUrl;
+          img.classList.add("hyperlink-image");
           container.appendChild(img);
         });
-      })
-      .catch(error => console.error("Error fetching images:", error));
-  }
+      }
 
   var currentYear = new Date().getFullYear();
   document.getElementById("currentYear").innerText = currentYear;
