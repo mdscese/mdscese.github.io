@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
           const img = document.createElement("img");
           img.src = imageUrl;
           img.alt = imageUrl;
-          img.classList.add("hyperlink-image");
           container.appendChild(img);
         });
       }
