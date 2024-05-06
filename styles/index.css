@@ -27,14 +27,14 @@ body {
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     text-align: center; /* Align content to the center */
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 20px;
 }
 
 .center-container {
     margin: 0 auto; /* Center the container horizontally */
     max-width: 1000px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
 }
 
 .image-container {
@@ -45,6 +45,7 @@ body {
     margin-bottom: 20px;
     background-color: blue;
     overflow: hidden;
+    width: 100%;
     transition: all 0.3s ease;
 }
 
@@ -53,15 +54,21 @@ body {
 }
 
 .image-container2 {
-    max-width: 100%; /* Ensure images don't exceed container width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    max-width: 100%;
+    width:100%;
+    background-color: blue;
+    overflow: hidden;
 }
 
 .image-container2 img {
-    width: auto; /* Allow images to adjust their width */
-    height: auto; /* Allow images to adjust their height */
-    max-width: 100%; /* Ensure images don't exceed container width */
-    max-height: 100%; /* Ensure images don't exceed container height */
-    object-fit: cover; /* Zoom the images to cover the container */
+    display:flex;
+    flex: 1;
+    width: auto;
+    height: auto; /* Allow the image to adjust its height */
+    object-fit: cover; /* Zoom the image to cover the container */
 }
 
 .title-box {
@@ -283,6 +290,9 @@ body {
         margin-right: 0px;
         margin-bottom: 8px;;
     }
+    #image2 {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1510px) {
@@ -299,6 +309,9 @@ body {
         display: none;
     }
     .archive-btn {
+        display: none;
+    }
+    #image3 {
         display: none;
     }
 }
