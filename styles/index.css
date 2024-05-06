@@ -37,16 +37,18 @@ body {
     max-width: 1000px;
 }
 
-.blue-rectangle {
+.image-container {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 200px;
     margin-bottom: 20px;
     background-color: blue;
     transition: all 0.3s ease;
-}
-
-.blue-rectangle:hover {
-    width: 110%;
+  }
+  
+.image-container img {
+    max-width: 30%; /* Adjust this as per your design */
 }
 
 .image-in{
@@ -250,9 +252,16 @@ body {
 }
 
 .sitter-item {
+    text-decoration: none;
+    color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     flex: 1; /* Allow items to grow and fill the available space equally */
+  }
+
+  .sitter-items a:hover {
+    font-size: 20px;
   }
 
 .sitter-copyright {
