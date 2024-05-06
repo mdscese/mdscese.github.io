@@ -1,130 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gradient Background</title>
-<style>
-
-@font-face {
-    font-family: 'LEMONMILK';
-    src: url('./fonts/LEMONMILK/LEMONMILK-Regular.otf') format('opentype');
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, black, rgb(50, 50, 55), black);
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-}
-
-.container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    text-align: center; /* Align content to the center */
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 60px;
-}
-
-.container2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Align content to the center */
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 20px;
-}
-
-.center-container {
-    margin: 0 auto; /* Center the container horizontally */
-    max-width: 1200px;
-}
-
-.blue-rectangle {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-    background-color: blue;
-    transition: all 0.3s ease;
-}
-
-.blue-rectangle:hover {
-    width: 120%;
-    height: 400px;
-    margin-bottom: 20px;
-    background-color: blue;
-}
-
-.image-in{
-    width: auto;
-    height: 100%;
-}
-
-.hyperlink-image{
-    width: auto;
-    height: auto;
-}
-
-.title-box {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
-.name {
-    color: white;
-    font-family: 'LEMONMILK';
-    font-weight: bold;
-    font-size: 42px;
-}
-
-.references {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center buttons */
-}
-
-.reference img {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 4px;
-}
-
-.reference img:hover {
-    box-shadow: inset 0 0 100px 5px white, 0 0 100px 5px white; /* Add inset shadow behind the image */
-}
-
-.title-heading {
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: auto;
-    margin-bottom: 4px;
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 850px) {
-    .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Align items to the center of the container */
-    }
-    .title-heading {
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 8px;;
-    }
-}
-
-</style>
+<title>Marcus Scese's Portfolio</title>
+<script src="scripts/index.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
+
 <body>
     <div class="container center-container">
         <div class="name"><i>Marcus Scese</i></div>
@@ -157,31 +41,25 @@ body {
         <div class="blue-rectangle"></div>
         <div class="blue-rectangle"></div>
         <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="blue-rectangle"></div>
+        <div class="sitter">
+            <div class="sitter-items">
+                <a class="sitter-item" href="https://www.example.com">Archive</a>
+                <a class="sitter-item" href="https://www.example.com">About Me</a>
+                <a class="sitter-item" href="https://www.example.com">Back to Top</a>
+            </div>
+            <div class="sitter-copyright">&copy;<span id="currentYearSmall"></span> Marcus Scese</div>
+        </div>
     </div>
-    <!-- <div class="flex-column">
-        <div class="header, title-box">
-            <h1>Your Name</h1>
-            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
-                <img src="./images/LinkedIn_icon.png" alt="LinkedIn Icon Hyperlink">
-            </a>
-            <a href="mailto:your@email.com">
-                <img class="hyperlink-image" src="./images/Gmail_icon.png" alt="Gmail Icon Hyperlink">
-            </a>
-            <a href="https://www.github.com">
-                <img class="hyperlink-image" src="./images/GitHub_icon.png" alt="GitHub Icon Hyperlink">
-            </a>
-        </div>
-        <div class="blue-rectangle">
-            <img class="image-in" src="./images/Capture.PNG" alt="Phone Screen">
-        </div>
-        <div class="blue-rectangle"></div>
-        <div class="blue-rectangle"></div>
-        <div class="blue-rectangle"></div>
-        <div class="blue-rectangle"></div>
-        <div class="blue-rectangle"></div>
-        <div class="blue-rectangle"></div>
-        <div class="blue-rectangle"></div>
-        <div class="blue-rectangle"></div>
-    </div> -->
-</body>
+
+    <div id="archiveBtn" class="archive-btn">&#128230;</div>
+    <div class="archive-text">Archive</div>  
+    <div id="aboutMeBtn" class="about-me-btn">&#127938;</div>
+    <div class="about-me-text">About Me</div>
+    <div id="scrollToTopBtn" class="scroll-to-top-btn">&#9650;</div>
+    <div class="scroll-to-top-text">Back to Top</div>
+    <div  class="copyright">&copy;<span id="currentYear"></span> Marcus Scese</div>
 </html>
