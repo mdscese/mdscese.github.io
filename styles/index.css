@@ -39,15 +39,29 @@ body {
 
 .image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
     height: 300px;
     margin-bottom: 20px;
-  }
-  
-.image-container img {
-    display: flex;
-    flex: 1;
-    object-fit: cover;
+    background-color: blue;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.image-container:hover {
+    width: 110%; /* Expand the width by 10% */
+}
+
+.image-container2 {
+    max-width: 100%; /* Ensure images don't exceed container width */
+}
+
+.image-container2 img {
+    width: auto; /* Allow images to adjust their width */
+    height: auto; /* Allow images to adjust their height */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    max-height: 100%; /* Ensure images don't exceed container height */
+    object-fit: cover; /* Zoom the images to cover the container */
 }
 
 .title-box {
