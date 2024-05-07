@@ -27,14 +27,14 @@ body {
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     text-align: center; /* Align content to the center */
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
 }
 
 .center-container {
     margin: 0 auto; /* Center the container horizontally */
     max-width: 1000px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 20px;
 }
 
 .image-container {
@@ -43,7 +43,6 @@ body {
     align-items: center; /* Center the images vertically */
     height: 300px;
     margin-bottom: 20px;
-    background-color: blue;
     overflow: hidden;
     width: 100%;
     transition: all 0.3s ease;
@@ -59,7 +58,6 @@ body {
     align-items: center; /* Center the image vertically */
     max-width: 100%;
     width:100%;
-    background-color: blue;
     overflow: hidden;
 }
 
@@ -170,6 +168,7 @@ body {
     font-size: 20px;
     cursor: pointer;
     border-radius: 50%;
+    text-decoration: none;
   }
 
   .about-me-btn:hover {
@@ -203,6 +202,7 @@ body {
     font-size: 20px;
     cursor: pointer;
     border-radius: 50%;
+    text-decoration: none;
   }
   
   .archive-btn:hover {
@@ -272,6 +272,11 @@ body {
 
   .sitter-items a:hover {
     font-size: 20px;
+  }
+
+  .sitter-items div:hover {
+    font-size: 20px;
+    cursor: pointer;
   }
 
 .sitter-copyright {
