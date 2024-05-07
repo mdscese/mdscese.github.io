@@ -40,12 +40,18 @@ body {
     width: 110%;
 }
 
-.container2 img {
-    width: 40%;
-    margin-right: 30px;
-    margin-bottom: 25px;
-    border-radius: 40px;
-    float: left;
+.next-button {
+  position: absolute;
+  top: 37%;
+  right: 3%;
+  display: none;
+  font-size: 70px;
+  transition: all 0.3s ease;
+}
+
+.next-button:hover {
+  color: #888;
+  cursor:pointer;
 }
 
 .line {
@@ -54,6 +60,24 @@ body {
     border-radius: 5px;
     background-color: white;
     margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 40%;
+  height: 400px;
+  background-color: blue;
+  margin-right: 30px;
+  margin-bottom: 25px;
+  border-radius: 40px;
+  float: left;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 40px;
+  height: auto;
 }
 
 .resume-container {
