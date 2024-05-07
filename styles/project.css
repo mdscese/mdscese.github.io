@@ -133,7 +133,7 @@ body {
 
   .home-btn {
     position: fixed;
-    bottom: 140px;
+    bottom: 200px;
     right: 20px;
     background-color: #333;
     color: white;
@@ -157,7 +157,7 @@ body {
 
 .home-text {
   position: fixed;
-  bottom: 140px;
+  bottom: 200px;
   right: 70px; /* Adjusted to be next to the button */
   display: none; /* Initially hide the text */
   color: white;
@@ -167,7 +167,7 @@ body {
 
   .archive-btn {
     position: fixed;
-    bottom: 80px;
+    bottom: 140px;
     right: 20px;
     background-color: #333;
     color: white;
@@ -191,12 +191,46 @@ body {
 
 .archive-text {
   position: fixed;
-  bottom: 80px;
+  bottom: 140px;
   right: 70px; /* Adjusted to be next to the button */
   display: none; /* Initially hide the text */
   color: white;
   padding: 10px;
   border-radius: 5px;
+}
+
+.about-me-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.about-me-btn:hover {
+  background-color: #555;
+}
+
+.about-me-btn:hover + .about-me-text {
+  display: inline-block; /* Show the text */
+}
+
+.about-me-text {
+position: fixed;
+bottom: 80px;
+right: 70px; /* Adjusted to be next to the button */
+display: none; /* Initially hide the text */
+color: white;
+padding: 10px;
+border-radius: 5px;
 }
 
 .copyright {
@@ -287,6 +321,9 @@ body {
     .home-btn {
         display: none;
     }
+    .about-me-btn {
+      display: none;
+  }
     .archive-btn {
         display: none;
     }
