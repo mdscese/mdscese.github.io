@@ -1,207 +1,162 @@
 @font-face {
-    font-family: 'LEMONMILK';
-    src: url('../fonts/LEMONMILK/LEMONMILK-Regular.otf') format('opentype');
+  font-family: 'LEMONMILK';
+  src: url('../fonts/LEMONMILK/LEMONMILK-Regular.otf') format('opentype');
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, black, rgb(50, 50, 55), black);
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, black, rgb(50, 50, 55), black);
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
 }
 
 .container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    text-align: center; /* Align content to the center */
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: center; /* Align content to the center */
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 60px;
 }
 
 .container3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
 }
 
 .center-container {
-    margin: 0 auto; /* Center the container horizontally */
-    max-width: 1000px;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1000px;
 }
 
 .container2 {
-    width: 110%;
+  width: 110%;
 }
 
 .next-button {
-  position: absolute;
-  top: 37%;
-  right: 3%;
-  display: none;
-  font-size: 70px;
-  transition: all 0.3s ease;
+position: absolute;
+bottom: 0%;
+right: 3%;
+display: none;
+font-size: 70px;
+transition: all 0.3s ease;
 }
 
 .next-button:hover {
-  color: #888;
-  cursor:pointer;
+color: #888;
+cursor:pointer;
 }
 
 .line {
-    width: 100%;
-    height: 3px;
-    border-radius: 5px;
-    background-color: white;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 20px;
 }
 
 .image-container {
-  position: relative;
-  width: 40%;
-  height: 400px;
-  background-color: blue;
-  margin-right: 30px;
-  margin-bottom: 25px;
-  border-radius: 40px;
-  float: left;
-  overflow: hidden;
+position: relative;
+width: 40%;
+height: 400px;
+margin-right: 30px;
+margin-bottom: 25px;
+float: left;
+overflow: hidden;
 }
 
 .image-container img {
-  width: 100%;
-  border-radius: 40px;
-  height: auto;
-}
-
-.resume-container {
-    width: 100%;
-    padding-bottom: 20px;
-}
-
-.resume-container img {
-    width: 100%;
-    height: auto;
+border-radius: 20px;
+position: absolute;
+width: 100%;
+height: 100%;
 }
 
 .name {
-    color: white;
-    font-family: 'LEMONMILK';
-    font-weight: bold;
-    font-size: 42px;
+  color: white;
+  font-family: 'LEMONMILK';
+  font-weight: bold;
+  font-size: 42px;
 }
 
 
 .scroll-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  
-  .scroll-to-top-btn:hover {
-    background-color: #555;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
 
-  .scroll-to-top-btn:hover + .scroll-to-top-text {
-    display: inline-block; /* Show the text */
+.scroll-to-top-btn:hover {
+  background-color: #555;
+}
+
+.scroll-to-top-btn:hover + .scroll-to-top-text {
+  display: inline-block; /* Show the text */
 }
 
 .scroll-to-top-text {
+position: fixed;
+bottom: 20px;
+right: 70px; /* Adjusted to be next to the button */
+display: none; /* Initially hide the text */
+color: white;
+padding: 10px;
+border-radius: 5px;
+}
+
+.home-btn {
   position: fixed;
-  bottom: 20px;
-  right: 70px; /* Adjusted to be next to the button */
-  display: none; /* Initially hide the text */
+  bottom: 200px;
+  right: 20px;
+  background-color: #333;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-decoration: none;
 }
 
-  .home-btn {
-    position: fixed;
-    bottom: 200px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    text-decoration: none;
-  }
-
-  .home-btn:hover {
-    background-color: #555;
+.home-btn:hover {
+  background-color: #555;
 }
-  
-  .home-btn:hover + .home-text {
-    display: inline-block; /* Show the text */
+
+.home-btn:hover + .home-text {
+  display: inline-block; /* Show the text */
 }
 
 .home-text {
-  position: fixed;
-  bottom: 200px;
-  right: 70px; /* Adjusted to be next to the button */
-  display: none; /* Initially hide the text */
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
+position: fixed;
+bottom: 200px;
+right: 70px; /* Adjusted to be next to the button */
+display: none; /* Initially hide the text */
+color: white;
+padding: 10px;
+border-radius: 5px;
 }
 
-  .archive-btn {
-    position: fixed;
-    bottom: 140px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    width: 40px;
-    height: 40px;
-    line-height: 45px;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    text-decoration: none;
-  }
-  
-  .archive-btn:hover {
-    background-color: #555;
-  }
-
-  .archive-btn:hover + .archive-text {
-    display: inline-block; /* Show the text */
-}
-
-.archive-text {
+.archive-btn {
   position: fixed;
   bottom: 140px;
-  right: 70px; /* Adjusted to be next to the button */
-  display: none; /* Initially hide the text */
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.about-me-btn {
-  position: fixed;
-  bottom: 80px;
   right: 20px;
   background-color: #333;
   color: white;
@@ -215,12 +170,46 @@ body {
   text-decoration: none;
 }
 
-.about-me-btn:hover {
+.archive-btn:hover {
   background-color: #555;
 }
 
-.about-me-btn:hover + .about-me-text {
+.archive-btn:hover + .archive-text {
   display: inline-block; /* Show the text */
+}
+
+.archive-text {
+position: fixed;
+bottom: 140px;
+right: 70px; /* Adjusted to be next to the button */
+display: none; /* Initially hide the text */
+color: white;
+padding: 10px;
+border-radius: 5px;
+}
+
+.about-me-btn {
+position: fixed;
+bottom: 80px;
+right: 20px;
+background-color: #333;
+color: white;
+width: 40px;
+height: 40px;
+line-height: 45px;
+text-align: center;
+font-size: 20px;
+cursor: pointer;
+border-radius: 50%;
+text-decoration: none;
+}
+
+.about-me-btn:hover {
+background-color: #555;
+}
+
+.about-me-btn:hover + .about-me-text {
+display: inline-block; /* Show the text */
 }
 
 .about-me-text {
@@ -234,97 +223,97 @@ border-radius: 5px;
 }
 
 .copyright {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
 }
 
-  ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
-  }
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
 
-  ::-webkit-scrollbar-track {
-    background-color: black; /* Color of the track */
-  }
+::-webkit-scrollbar-track {
+  background-color: black; /* Color of the track */
+}
 
-  ::-webkit-scrollbar-thumb {
-    background-color: #888; /* Color of the thumb */
-    border-radius: 5px; /* Rounded edges */
-  }
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb */
+  border-radius: 5px; /* Rounded edges */
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Color of the thumb on hover */
-  }
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the thumb on hover */
+}
 
 .sitter {
-    width: 100%;
-    height: 100px;
-    background-color: Black;
-    text-align: center;
-    justify-content: flex-end;
-    display: none;
-    flex-direction: column;
+  width: 100%;
+  height: 100px;
+  background-color: Black;
+  text-align: center;
+  justify-content: flex-end;
+  display: none;
+  flex-direction: column;
 }
 
 .sitter-items {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
 }
 
 .sitter-item {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex: 1; /* Allow items to grow and fill the available space equally */
-  }
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1; /* Allow items to grow and fill the available space equally */
+}
 
-  .sitter-items a:hover {
-    font-size: 20px;
-  }
+.sitter-items a:hover {
+  font-size: 20px;
+}
 
-  .sitter-items div:hover {
-    font-size: 20px;
-    cursor: pointer;
-  }
+.sitter-items div:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
 
 .sitter-copyright {
-    padding-bottom: 20px;
-    padding-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 850px) {
-    .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Align items to the center of the container */
-    }
-    .title-heading {
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 8px;;
-    }
+  .container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Align items to the center of the container */
+  }
+  .title-heading {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 8px;;
+  }
 }
 
 @media screen and (max-width: 1510px) {
-    .sitter {
-        display: flex;
-    }
-    .copyright{
-        display: none;
-    }
-    .scroll-to-top-btn {
-        display: none;
-    }
-    .home-btn {
-        display: none;
-    }
-    .about-me-btn {
+  .sitter {
+      display: flex;
+  }
+  .copyright{
       display: none;
   }
-    .archive-btn {
-        display: none;
-    }
+  .scroll-to-top-btn {
+      display: none;
+  }
+  .home-btn {
+      display: none;
+  }
+  .about-me-btn {
+    display: none;
+}
+  .archive-btn {
+      display: none;
+  }
 }
