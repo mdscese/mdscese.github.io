@@ -40,6 +40,10 @@ body {
   width: 110%;
 }
 
+.container2 p {
+  font-size: larger;
+}
+
 .next-button {
 position: absolute;
 bottom: 0%;
@@ -294,6 +298,9 @@ border-radius: 5px;
       margin-left: 0px;
       margin-right: 0px;
       margin-bottom: 8px;;
+  }
+  .image-container {
+    width: 100%;
   }
 }
 
