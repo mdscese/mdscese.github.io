@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mario Party League</title>
+
+  <!-- Monospaced digital font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence:SCAN,XELA,YELA@-10,100,100&display=swap" rel="stylesheet">
+
+  <style>
+
+body {
+font-family: "Sixtyfour Convergence", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:
+"BLED" 0,
+"SCAN" -10,
+"XELA" 100,
+"YELA" 100;
+text-align: center;
+color: white;
+transition: background-color 0.5s, color 0.5s;
+}
+
+    video#background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    #content {
+      position: relative;
+      z-index: 1;
+      margin-top: 100px;
+    }
+
+    #timer {
+      font-size: 10em;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .blackout {
+      background-color: black !important;
+      color: black !important;
+    }
+
+    .blackout video,
+    .blackout #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background video -->
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Timer -->
+  <div id="content">
+    <div id="timer">Loading...</div>
+  </div>
+
+  <script>
+    function getNextWednesdayAt7PM() {
+      const now = new Date();
+      const target = new Date(now);
+      target.setHours(19, 0, 0, 0); // 7:00 PM
+
+      const day = now.getDay(); // 0 = Sunday, 3 = Wednesday
+      const daysUntilWed = (3 - day + 7) % 7 || 7;
+
+      target.setDate(now.getDate() + daysUntilWed);
+
+      if (day === 3 && now > target) {
+        target.setDate(target.getDate() + 7);
+      }
+
+      return target;
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const target = getNextWednesdayAt7PM();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.body.classList.add('blackout');
+        return;
+      }
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const totalHours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      const pad = n => String(n).padStart(2, '0');
+
+      document.getElementById('timer').textContent =
+        `${totalHours}:${pad(minutes)}:${pad(seconds)}`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
