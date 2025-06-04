@@ -107,20 +107,7 @@
 
   <script>
     function getNextWednesdayAt7PM() {
-      const now = new Date();
-      const target = new Date(now);
-      target.setHours(19, 0, 0, 0); // 7:00 PM
-
-      const day = now.getDay(); // 0 = Sunday, 3 = Wednesday
-      const daysUntilWed = (3 - day + 7) % 7 || 7;
-
-      target.setDate(now.getDate() + daysUntilWed);
-
-      if (day === 3 && now > target) {
-        target.setDate(target.getDate() + 7);
-      }
-
-      return target;
+      return new Date(2025, 5, 11, 19, 0, 0, 0);
     }
 
     function updateCountdown() {
