@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Party League</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
+    <script src="mpl_index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <video id="background-video" autoplay muted loop playsinline>
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div id="overlay-panel">
+      <div class="columns-container">
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+      <div id="top-banner" class="top-banner-box">
+      </div>
+      <div id="top-right-buttons">
+        <button id="inbox-btn" class="square-btn">
+          <img id="inbox-src" src="inbox.png" alt="Icon 1" />
+        </button>
+        <button id="logout-btn" class="square-btn">
+          <img src="logout.png" alt="Icon 2" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
